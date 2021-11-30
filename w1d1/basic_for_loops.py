@@ -32,5 +32,6 @@ lowNum = 3
 highNum = 91
 mult = 3
 
-for l in range(lowNum, highNum, mult):
-    print(l)
+for l in range(lowNum, highNum):
+    if l % mult == 0:
+        print(l)

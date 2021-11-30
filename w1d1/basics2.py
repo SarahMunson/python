@@ -46,7 +46,8 @@ print(values_greater_than_second([2]))
 #Example: length_and_value(6,2) should return [2,2,2,2,2,2]
 
 def length_and_value(size, value):
-    for size in value:
-        l = [[value] * size]
-        return l
+    size_length = []
+    for x in range(0, size): 
+        size_length.append(value)
+    return size_length
 print(length_and_value(3, 5))
