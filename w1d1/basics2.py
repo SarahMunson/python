@@ -2,10 +2,9 @@
 #Example: countdown(5) should return [5,4,3,2,1,0]
 
 def count_down(num):
-    l = [""]
-    for i in num:
-        i = i -1
-        l.push(i)
+    l = []
+    for i in range(num, -1, - 1):
+        l.append(i)
     return l
 
 print(count_down(10))
@@ -32,13 +31,15 @@ print(first_plus_length([11, 2, 3, 5, 5, 6]))
 #Example: values_greater_than_second([3]) should return False
 
 def values_greater_than_second(list):
-    for l in list:
+    new_list = []
+    for l in range(len(list)):
         if len(list) < 2: 
             return False 
         if list[l] > list[1]:
-            new_list = [""]
-            new_list.push(list[l])
+            new_list.append(list[l])
+    print(new_list)
 print(values_greater_than_second([1, 3, 4, 6]))
+print(values_greater_than_second([2]))
 
 #This Length, That Value - Write a function that accepts two integers as parameters: size and value. The function should create and return a list whose length is equal to the given size, and whose values are all the given value.
 #Example: length_and_value(4,7) should return [7,7,7,7]
