@@ -16,9 +16,11 @@ for i in range(1, 101):
         print(i)
 
 #Whoa. That Sucker's Huge - Add odd integers from 0 to 500,000, and print the final sum.
-# for i in range(1, 500000, 2):
-#     sum = i[i] + i
-# print(sum)
+sum = 0
+for i in range(500000):
+    if(i % 2 == 1):
+        sum += i
+print(sum)
 
 #Countdown by Fours - Print positive numbers starting at 2018, counting down by fours
 for i in range(2018, 0, -4):
