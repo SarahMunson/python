@@ -1,6 +1,6 @@
 import bank_account
 
-class User:
+class User(bank_account.BankAccount):
     bank_name ="First National Dojo"
     def __init__(self, name, email):
         self.name = name
