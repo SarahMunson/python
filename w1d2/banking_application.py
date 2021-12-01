@@ -7,9 +7,11 @@ class User:
     
     def make_deposit(self, amount):
         self.account_balance += amount
+        return self
 
     def make_withdrawal(self, amount):
         self.account_balance -= amount
+        return self
 
     def display_user_balance(self):
         print(f"{self.name} {self.account_balance}")
@@ -32,16 +34,18 @@ guido.make_deposit(100)
 guido.make_deposit(100)
 guido.make_deposit(100)
 guido.make_withdrawal(400)
-print(guido.display_user_balance())
+guido.display_user_balance()
 
 monty.make_deposit(400)
 monty.make_deposit(600)
 monty.make_withdrawal(300)
 monty.make_withdrawal(300)
-print(monty.display_user_balance())
+monty.display_user_balance()
 
 nice.make_deposit(800)
 nice.make_withdrawal(200)
 nice.make_withdrawal(200)
 nice.make_withdrawal(200)
-print(nice.display_user_balance())
+nice.display_user_balance()
+
+nice.make_withdrawal(600).make_withdrawal(400).make_deposit(2400).display_user_balance()
