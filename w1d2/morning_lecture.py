@@ -17,7 +17,7 @@
 # employees = [first_employee, second_employee, third_employee]
 
 # for employee in employees:
-#     employee["salary"] *=1.1
+#     employee["salary"] *= 1.1
 #     print(employee["salary"])
 
 class Employee():

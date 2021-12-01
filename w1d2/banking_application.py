@@ -21,7 +21,7 @@ guido = User("guido VonRossum", "guido@python.com")
 monty = User("monty Python", "monty@python.com")
 nice = User("Nicety Nice", "niceness@gmail.com")
 
-banking_users =[guido, monty, nice]
+# banking_users =[guido, monty, nice]
 
 # print(guido.name)
 # print(monty.email)
