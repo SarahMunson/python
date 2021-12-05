@@ -5,22 +5,28 @@ app.secret_key = 'keep it safe'
 
 @app.route('/')
 def main():
+    if 'counter' not in session:
+        session['counter'] = 0
+    else:
+        session['counter'] += 1
     return render_template('index.html')
-
-# @app.route('/', method=['POST'])
-# def main():
-#     return redirect('/tracker')
 
 @app.route('/tracker')
 def tracker():
-#     if 'key_name' in session:
-#       print('key exists!')
-# else:
-#     print("key 'key_name' does NOT exist")
+    session['counter'] += 1
+    return redirect('/')
 
-    session['username'] = request.form['name']
-    session['useremail'] = request.form['email']
-    return render_template('counter.html')
+@app.route('/reset')
+def reset():
+    session.clear()
+    return redirect('/')
+
+@app.route('/choose', methods=['POST'])
+def choose():
+    session['choose'] = int(request.form['choose'])
+    session['counter'] += session['choose'] - 1
+    return redirect('/')
+
 
 
 if __name__ == "__main__":
